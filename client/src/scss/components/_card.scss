@@ -1,0 +1,59 @@
+.mCard {
+  perspective: 100rem;
+  -moz-perspective: 100rem;
+  position: relative;
+  flex: 1 1 auto;
+  margin: .5rem;
+  display: block;
+  cursor: pointer;
+  // height: 20rem;
+  width: 14.28% !important;
+
+
+  &__side {
+    background-image: linear-gradient(to bottom, #363636, #292929);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: .5rem;
+    transition: all .2s ease;
+
+    div {
+      @include absCenter;
+      width: 60%;
+
+      @media only screen and (max-height: 450px) {
+        top: 55%;
+      }
+    }
+
+    &--back {
+     &-active {
+        transform: rotateY(-180deg)
+      }
+    }
+
+    &--front {
+      background-image: linear-gradient(to right bottom, $color1, $color3);
+      transform: rotateY(180deg);
+      svg {
+        fill: #fff;
+      }
+
+      &-active {
+        transform: rotateY(0)
+      }
+      &-matched {
+        animation: pulse .3s;
+      }
+
+    }
+  }
+
+
+
+
+}

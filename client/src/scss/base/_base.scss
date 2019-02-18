@@ -1,0 +1,60 @@
+
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* font-size: 1rem == 10px; */
+  box-sizing: border-box;
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+
+  // @include respond(BP1800) {
+  //   font-size: 75%; //1 rem = 9px, 9/16 = 50%
+  // }
+  // @include respond(BP600) {
+  //   font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+  // }
+  // @include respond(BP450) {
+  //   font-size: 50%; //1 rem = 8px, 8/16 = 50%
+
+  // }
+
+}
+
+
+input:active,
+input:focus,
+button:active,
+button:focus,
+  {
+  outline: none !important;
+}
+
+::-moz-focus-inner {
+  border: 0;
+}
+
+
+::selection {
+  background: rgba($color2, .3);
+  // color: #ff005e
+}
+
+::-moz-selection {
+  background: rgba($color2, .3);
+  color: #ff005e
+}
+
+.noSelect {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+

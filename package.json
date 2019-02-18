@@ -1,0 +1,22 @@
+{
+  "name": "memorax",
+  "version": "0.1.0",
+  "description": "RTC multiplayer game",
+  "main": "server.js",
+  "author": "Omar Villanueva",
+  "license": "MIT",
+  "dependencies": {
+    "classnames": "2.2.6",
+    "concurrently": "4.1.0",
+    "express": "4.16.4",
+    "react-router-dom": "4.3.1",
+    "socket.io": "2.2.0"
+  },
+  "scripts": {
+    "server": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "client-build": "npm run build --prefix client",
+    "client-install": "npm install --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  }
+}

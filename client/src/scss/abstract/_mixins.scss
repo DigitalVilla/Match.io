@@ -1,0 +1,35 @@
+@mixin absCenter {
+  top:50%;
+  left:50%;
+  position: absolute;
+  transform: translate(-50%,-50%);
+}
+
+@mixin clearfix {
+  &::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == BP360 {
+      @media only screen and (max-width: 22.5em) { @content };    //360px
+  }
+  @if $breakpoint == BP450 {
+      @media only screen and (max-width: 28.13em) { @content };    //450px
+  }
+  @if $breakpoint == BP600 {
+      @media only screen and (max-width: 37.5em) { @content };    //600px
+  }
+  @if $breakpoint == BP900 {
+      @media only screen and (max-width: 56.25em) { @content };     //900px
+  }
+  @if $breakpoint == BP1200{
+      @media only screen and (max-width: 75em) { @content };    //1200px
+  }
+  @if $breakpoint == BP1800{
+      @media only screen and (min-width: 112.5em) { @content };    //1800px
+  }
+}
