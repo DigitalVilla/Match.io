@@ -1,4 +1,4 @@
-import { shuffle } from '../utils/utils'
+import { shuffle } from '../../utils/utils'
 
 const cards = ["npm", "css", 'reddit', 'steam', 'twitter', "html", "linkedin", "github", "apple", "android", "firefox", "git", "codepen", "stackoverflow", "chrome"];
   

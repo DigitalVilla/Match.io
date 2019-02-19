@@ -1,0 +1,88 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.matchio {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+
+  .controller {
+    background-image: linear-gradient(to right bottom, $color1, $color3);
+    height: 100%;
+    width: 15%;
+    color: #fff;
+    font-size: 90%;
+
+    ul {
+      list-style: none;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      
+      li {
+        span {
+          letter-spacing: 1px;
+          padding-right: 2px;
+        }
+
+      }
+    }
+
+  }
+
+  .mPad {
+    padding: .5rem;
+
+    margin: auto;
+    height: 100%;
+    width: 85%;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (orientation: portrait) {
+    flex-direction: column;
+
+    .controller {
+      width: 100%;
+      height: 8%;
+
+      ul {
+        height: 100%;
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+
+        li {
+        
+          span {
+            padding-right: .2rem;
+            letter-spacing: 1px;
+          }
+
+        }
+
+      }
+    }
+
+    .mPad {
+      height: 92%;
+      width: 100%;
+    }
+  }
+
+
+
+}

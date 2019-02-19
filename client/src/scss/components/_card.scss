@@ -49,6 +49,9 @@
       &-matched {
         animation: pulse .3s;
       }
+      &-winner{
+        animation: pulse .7s infinite;
+      }
 
     }
   }

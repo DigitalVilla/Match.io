@@ -1,12 +1,11 @@
 {
-  "name": "memorax",
+  "name": "match.io",
   "version": "0.1.0",
   "description": "RTC multiplayer game",
   "main": "server.js",
   "author": "Omar Villanueva",
   "license": "MIT",
   "dependencies": {
-    "classnames": "2.2.6",
     "concurrently": "4.1.0",
     "express": "4.16.4",
     "react-router-dom": "4.3.1",

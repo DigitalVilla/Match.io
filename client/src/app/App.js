@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
-import Deck from './components/Deck'
-import Controller from './components/Controller'
-// import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import Matchio from './views/Matchio'
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import  store  from './redux/store';
+
 
 class App extends Component {
+
   render() {
     return (
-      <div className="container noSelect">
-        <div className='memorax'>
-          <Controller />
-          <Deck />
-        </div>
-      </div>
+      <Provider store={store}>
+        <Router>
+          <Switch>
+            <Route exact path='/' component={Matchio} />
+          </Switch>
+        </Router>
+      </Provider>
     )
   }
 }

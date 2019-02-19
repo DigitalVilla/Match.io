@@ -48,6 +48,7 @@ const Icon = (props) => {
           })
         }
       </svg>
+      {props.value || ''}
     </button>
   )
 }

@@ -8,3 +8,15 @@ body {
   background: #e7e7e7;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); //eliminate mobile hoghlight
 }
+
+.icon_BTN,
+.icon_BTN:focus,
+.icon_BTN:hover,
+.icon_BTN:active {
+    cursor: pointer;
+    border: none;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    outline: none;
+}

@@ -3,7 +3,7 @@ import { SVG } from '../components/Icon'
 import logo from '../../img/villa.png'
 import classnames from 'classnames'
 
-const Card = ({card, onClick}) => {
+const Card = ({card, onClick, winner}) => {
   return (
     <div onClick= {onClick}className="mCard">
       <div className={classnames("mCard__side mCard__side--back", {
@@ -15,7 +15,8 @@ const Card = ({card, onClick}) => {
       </div>
       <div className={classnames("mCard__side mCard__side--front", {
           "mCard__side--front-active": card.faceUp,
-          "mCard__side--front-matched": card.matched
+          "mCard__side--front-matched": card.match,
+          "mCard__side--front-winner": winner
         })}>
         <div>
           <SVG icon={card.icon} />
