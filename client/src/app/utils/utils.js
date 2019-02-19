@@ -53,10 +53,10 @@ export function Timer(callback, delay) {
   this.resume();
 }
 
-var timer = new Timer(function() {
-  alert("Done!");
-}, 1000);
+// var timer = new Timer(function() {
+//   alert("Done!");
+// }, 1000);
 
-timer.pause();
-// Do some stuff...
-timer.resume();
+// timer.pause();
+// // Do some stuff...
+// timer.resume();
