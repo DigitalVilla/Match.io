@@ -6,8 +6,7 @@
 
   50% {
     transform: scale3d(1.05, 1.05, 1.05);
-    background-image: linear-gradient(to right bottom, lighten($color1, 10%), lighten($color3, 10%)) 
-    
+    background-image: linear-gradient(to right bottom, lighten($color1, 10%) 20%, lighten($color3, 5%) 70%)
   }
 
   to {

@@ -5,7 +5,12 @@ const initialState = {
   flipped: {},
   pairs: 0,
   turns: 0,
-  winner: false
+  winner: false,
+  time: {
+    hrs: 0,
+    min: 0,
+    sec: 0
+  }
 };
 
 export default function (state = initialState, action) {
@@ -15,6 +20,12 @@ export default function (state = initialState, action) {
         ...state,
         flipped: action.payload.flipped,
         deck: action.payload.deck
+      };
+
+    case "TIME_UP":
+      return {
+        ...state,
+        time: action.payload
       };
 
     case VALIDATE_MATCH:

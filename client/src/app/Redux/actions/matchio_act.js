@@ -27,7 +27,7 @@ export const flipCard = (card, prevState) => dispatch => {
 }
 
 export const isAMatch = (card, prevState) => dispatch => {
-  if (count != 2) return;
+  if (count !== 2) return;
   const match = card.icon === prevState.flipped.icon;
   setTimeout(() => {
     count = 0;
@@ -40,18 +40,10 @@ export const isAMatch = (card, prevState) => dispatch => {
           faceUp: match
         }, true)
     })
-  }, match ? 200 : 400); //delay to see 
+  }, match ? 200 : 400); //delay to see
 }
 
 
-
-
-
-
-
-
-
-// 
 const flipCards = (prevState, card, { faceUp, match, flipped }) => {
   return {
     deck: prevState.deck.map((crd, i) => {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Matchio from './views/Macthio'
 import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
-import  store  from './redux/store';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import store from './redux/store';
 
 
 class App extends Component {

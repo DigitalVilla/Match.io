@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-
+import store from '../redux/store'
 let pid;
 export default class Chrono extends Component {
   state = {
@@ -13,14 +13,17 @@ export default class Chrono extends Component {
 
   componentWillReceiveProps(nextProps) {
     if (!this.state.start && nextProps.start === true)
-    pid = setInterval(() => this.timer(), 1000)
+      pid = setInterval(() => this.timer(), 1000)
+    if (nextProps.stop === true)
+      clearInterval(pid);
   }
-  componentWillMount () {
-    
+
+  componentWillMount() {
+
   }
 
   formatter = () => {
-    const { sec, hrs, min } = this.state.timer;
+    const { sec, min } = this.state.timer;
     const d2 = (n) => ("0" + n).slice(-2); //double digit
     // return `${d2(hrs)}:${d2(min)}:${d2(sec)}`
     return `${d2(min)}:${d2(sec)}`
@@ -35,6 +38,17 @@ export default class Chrono extends Component {
       //cleanup
       sec = sec === 60 ? 0 : sec;
       min = min === 60 ? 0 : min;
+
+      if (sec % 10 === 0) {
+        store.dispatch({
+          type: "TIME_UP",
+          payload: {
+            hrs,
+            min,
+            sec
+          }
+        })
+      }
 
       return ({
         start: true,
