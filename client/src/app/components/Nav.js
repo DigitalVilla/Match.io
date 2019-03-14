@@ -15,8 +15,8 @@ const Nav = (props) => {
         "nav__nav--open": props.open
       })}>
         <ul className="nav__list">
-          <li className="nav__item">Chat Room</li>
-          <li className="nav__item">Multiplayer</li>
+          {/* <li className="nav__item">Chat Room</li>
+          <li className="nav__item">Multiplayer</li> */}
           <li onClick={reload} className="nav__item">New Game</li>
         </ul>
       </nav>
