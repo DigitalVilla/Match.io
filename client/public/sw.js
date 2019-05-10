@@ -35,6 +35,7 @@ self.addEventListener('activate', e => {
 })
 
 self.addEventListener('fetch', e => {
+console.log(e);
 
   const resp = caches.match(e.request).then(res => {
     // test dynamic cache
