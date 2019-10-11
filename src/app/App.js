@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Matchio from './views/Macthio'
+import Matchio from './views/macthio'
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import store from './redux/store';

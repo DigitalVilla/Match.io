@@ -38,6 +38,7 @@
     }
 
     &--front {
+      animation: fadeOut 1s ease-in alternate-reverse;
       background-image: linear-gradient(to right bottom, $color1, $color3);
       transform: rotateY(180deg);
       svg {

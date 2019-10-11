@@ -2,6 +2,15 @@ import React from 'react'
 import classnames from 'classnames'
 
 const Nav = (props) => {
+
+const reload = () => {
+//   props.onClick();
+//   document.body.children[0].classList.add('fadeOut');
+//   setTimeout(()=>  window.location.reload(),300);
+  window.location.reload();
+  };
+
+
   return (
     <div className='nav'>
       <span onClick={props.onClick} className={classnames("nav__btn nav-abs ", {
@@ -25,6 +34,3 @@ const Nav = (props) => {
 }
 
 export default Nav
-
-
-const reload = () => window.location.reload();

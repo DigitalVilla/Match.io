@@ -18,6 +18,27 @@
 
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
   <title>Match.io</title>
+  <style>
+    body {
+      background-image: linear-gradient(to top, #3f3f3f, #444444)
+    }
+
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+
+      to {
+        opacity: 0;
+      }
+    }
+
+    img,
+    li,
+    svg {
+      animation: fadeOut 1s ease-in alternate-reverse;
+    }
+  </style>
 </head>
 
 <body>

@@ -28,7 +28,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-    
+
       li {
         span {
           letter-spacing: 1px;
@@ -57,7 +57,7 @@
     .controller {
       width: 100%;
       height: 8%;
-      
+
 
       ul {
         height: 100%;
@@ -67,7 +67,7 @@
         justify-content: space-around;
 
         li {
-        
+        animation: fadeOut 1s ease-in alternate-reverse;
           span {
             padding-right: .2rem;
             letter-spacing: 1px;

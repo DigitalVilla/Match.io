@@ -1,0 +1,29 @@
+@keyframes pulse {
+	from {
+		transform: scale3d(1, 1, 1);
+
+	}
+
+	50% {
+		transform: scale3d(1.05, 1.05, 1.05);
+		background-image: linear-gradient(to right bottom, lighten($color1, 10%) 20%, lighten($color3, 5%) 70%)
+	}
+
+	to {
+		transform: scale3d(1, 1, 1);
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+
+	to {
+		opacity: 0;
+	}
+}
+
+.fadeOut {
+	animation: fadeOut .5s ease-out;
+}
